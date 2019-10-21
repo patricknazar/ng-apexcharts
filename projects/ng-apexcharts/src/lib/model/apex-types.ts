@@ -254,7 +254,7 @@ export interface XAxisAnnotations {
   x?: number | string;
   x2?: null | number;
   strokeDashArray?: number;
-  fillColor?: string,
+  fillColor?: string;
   borderColor?: string;
   opacity?: number;
   offsetX?: number;
@@ -263,9 +263,9 @@ export interface XAxisAnnotations {
 }
 export interface YAxisAnnotations {
   y?: null | number;
-  y2?: null | number,
+  y2?: null | number;
   strokeDashArray?: number;
-  fillColor?: string,
+  fillColor?: string;
   borderColor?: string;
   opacity?: number;
   offsetX?: number;
@@ -527,8 +527,6 @@ export interface ApexLegend {
   height?: number;
   offsetX?: number;
   offsetY?: number;
-  formatter?(legendName: string, opts?: any): string;
-  tooltipHoverFormatter?(legendName: string, opts?: any): string;
   textAnchor?: string;
   labels?: {
     color?: string;
@@ -560,6 +558,8 @@ export interface ApexLegend {
   onItemHover?: {
     highlightDataSeries?: boolean;
   };
+  formatter?(legendName: string, opts?: any): string;
+  tooltipHoverFormatter?(legendName: string, opts?: any): string;
 }
 
 /**
@@ -741,11 +741,11 @@ export interface ApexXAxis {
   tooltip?: {
     enabled?: boolean;
     offsetY?: number;
-    formatter?(value: string, opts?: object): string;
     style?: {
-      fontSize?: string,
-      fontFamily?: string
+      fontSize?: string;
+      fontFamily?: string;
     }
+    formatter?(value: string, opts?: object): string;
   };
 }
 
@@ -760,7 +760,7 @@ export interface ApexYAxis {
   opposite?: boolean;
   logarithmic?: boolean;
   tickAmount?: number;
-  forceNiceScale?: boolean,
+  forceNiceScale?: boolean;
   min?: number;
   max?: number;
   floating?: boolean;
@@ -892,26 +892,26 @@ export interface ApexMarkers {
   radius?: number;
   offsetX?: number;
   offsetY?: number;
-  onClick?(e?: any): void;
-  onDblClick?(e?: any): void;
   hover?: {
     size?: number;
     sizeOffset?: number;
   };
+  onClick?(e?: any): void;
+  onDblClick?(e?: any): void;
 }
 
 
 export interface ApexNoData {
-  text?: string,
-  align?: 'left' | 'right' | 'center',
-  verticalAlign?: 'top' | 'middle' | 'bottom',
-  offsetX?: number,
-  offsetY?: number,
+  text?: string;
+  align?: 'left' | 'right' | 'center';
+  verticalAlign?: 'top' | 'middle' | 'bottom';
+  offsetX?: number;
+  offsetY?: number;
   style?: {
     color?: string,
     fontSize?: string,
     fontFamily?: string
-  }
+  };
 }
 
 export type ChartType = 'line' | 'area' | 'bar' | 'histogram' | 'pie' | 'donut' |

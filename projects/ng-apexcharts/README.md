@@ -2,9 +2,9 @@
   <img src="https://morrisj.net/storage/icons/ng-apexcharts/icon.svg" width="180" />
 </p>
 
-# ng-apexcharts
+# @patricknazar/ng-apexcharts
 
-ng-apexcharts is a wrapper for [apexcharts](https://apexcharts.com/) for angular.
+@patricknazar/ng-apexcharts is a wrapper for [apexcharts](https://apexcharts.com/) for angular.
 It introduces one simple component that enables you to use apexcharts
 in an angular project.
 
@@ -15,18 +15,10 @@ For a demo checkout: <a href="https://ngapexcharts-demo.stackblitz.io/" target="
 1. Install using npm:
 
 ```` ts
-npm install apexcharts ng-apexcharts --save
+npm install apexcharts @patricknazar/ng-apexcharts --save
 ````
 
-2. Open angular.json and under scripts add:
-
-```` ts
-"scripts": [
-  "node_modules/apexcharts/dist/apexcharts.min.js"
-]
-```` 
-
-3. Add ng-apexcharts-module to imports
+2. Add `NgApexchartsModule` to imports
 
 ```` ts
 imports: [
@@ -108,4 +100,6 @@ Now you're able to call methods from your Component.
 
 ## Author
 
-[Morris Janatzek](http://morrisj.net) ([morrisjdev](https://github.com/morrisjdev))
+([Patrick Nazar](https://github.com/patricknazar))
+
+Upstream Author: ~~[Morris Janatzek](http://morrisj.net) ([morrisjdev](https://github.com/morrisjdev))~~

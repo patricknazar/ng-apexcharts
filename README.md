@@ -2,9 +2,9 @@
   <img src="https://morrisj.net/storage/icons/ng-apexcharts/icon.svg" width="180" />
 </p>
 
-# ng-apexcharts
+# @patricknazar/ng-apexcharts
 
-ng-apexcharts is a wrapper for [apexcharts](https://apexcharts.com/) for angular.
+@patricknazar/ng-apexcharts is a wrapper for [apexcharts](https://apexcharts.com/) for angular.
 It introduces one simple component that enables you to use apexcharts
 in an angular project.
 
@@ -15,18 +15,10 @@ For a demo checkout: <a href="https://ngapexcharts-demo.stackblitz.io/" target="
 1. Install using npm:
 
 ```` ts
-npm install apexcharts ng-apexcharts --save
+npm install apexcharts @patricknazar/ng-apexcharts --save
 ````
 
-2. Open angular.json and under scripts add:
-
-```` ts
-"scripts": [
-  "node_modules/apexcharts/dist/apexcharts.min.js"
-]
-```` 
-
-3. Add ng-apexcharts-module to imports
+2. Add `NgApexchartsModule` to imports
 
 ```` ts
 imports: [
@@ -82,7 +74,7 @@ This is a list of all available attributes:
 
 With the attribute `autoUpdateSeries` you can control if the chart component should
 call the `updateSeries` function automatically if the series attribute is changed.
-Set this attribute to false if you are using and changing the type property in your
+Set this attribute to false if you are using and changig the type property in your
 series for a mixed chart. This only has the effect that the whole chart rerenders
 even if only the series changes.
 
@@ -99,7 +91,7 @@ Just reference the component as a ViewChild in your Component by using:
 @ViewChild('chartObj') chart: ChartComponent;
 ````
 
-and changing the template to this:
+and chaning the template to this:
 ```` html
 <apx-chart #chartObj></apx-chart>
 ````
@@ -108,4 +100,6 @@ Now you're able to call methods from your Component.
 
 ## Author
 
-[Morris Janatzek](http://morrisj.net) ([morrisjdev](https://github.com/morrisjdev))
+([Patrick Nazar](https://github.com/patricknazar))
+
+Upstream Author: ~~[Morris Janatzek](http://morrisj.net) ([morrisjdev](https://github.com/morrisjdev))~~

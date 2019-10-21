@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { ChartComponent } from './chart/chart.component';
 
-const declerations = [
+const DECLARATIONS = [
   ChartComponent
 ];
 
 @NgModule({
   declarations: [
-    ...declerations
+    ...DECLARATIONS,
   ],
   imports: [
   ],
   exports: [
-    ...declerations
+    ...DECLARATIONS
   ]
 })
 export class NgApexchartsModule { }

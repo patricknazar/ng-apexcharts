@@ -52,7 +52,7 @@ export class ChartComponent implements OnInit, OnChanges {
 
   @Input() autoUpdateSeries = true;
 
-  @ViewChild('chart') private chartElement: ElementRef;
+  @ViewChild('chart', { static: true }) private chartElement: ElementRef;
   private chartObj: any;
 
   ngOnInit() {
@@ -138,7 +138,7 @@ export class ChartComponent implements OnInit, OnChanges {
   }
 
   public destroy() {
-    this.chartObj.destroy()
+    this.chartObj.destroy();
   }
   public addXaxisAnnotation(options: any, pushToMemory?: boolean, context?: any) {
     this.chartObj.addXaxisAnnotation(options, pushToMemory, context);
